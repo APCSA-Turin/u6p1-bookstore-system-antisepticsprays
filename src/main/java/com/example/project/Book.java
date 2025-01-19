@@ -1,30 +1,75 @@
 package com.example.project;
 
-public class Book{
-    //requires 5 attributes String title, String author, int yearPublished, String isbn, int quantity
+public class Book {
+    //requires 5 attributes: String title, String author, int yearPublished, String isbn, int quantity
+    private String title;
+    private String author;
+    private int yearPublished;
+    private String isbn;
+    private int quantity;
 
-    //requires 1 constructor with 5 arguments that intitialize the attribtues of the class.
+    //requires 1 constructor with 5 arguments that initialize the attributes of the class
+    public Book(String title, String author, int yearPublished, String isbn, int quantity){
+        this.title = title; // initializes title
+        this.author = author; // initializes author
+        this.yearPublished = yearPublished; // initializes yearPublished
+        this.isbn = isbn; // initializes isbn
+        this.quantity = quantity; // initializes quantity
+    }
 
-    // public  getTitle() {}
+    // getter for title
+    public String getTitle() {
+        return title; // returns the title of the book
+    }
 
-    // public setTitle() {}
+    // setter for title
+    public void setTitle(String newTitle) {
+        title = newTitle; // sets a new title for the book
+    }
 
-    // public getAuthor() {}
+    // getter for author
+    public String getAuthor() {
+        return author; // returns the author of the book
+    }
 
-    // public setAuthor() {}
+    // setter for author
+    public void setAuthor(String newAuthor) {
+        author = newAuthor; // sets a new author for the book
+    }
 
-    // public getYearPublished() {}
+    // getter for yearPublished
+    public int getYearPublished() {
+        return yearPublished; // returns the year the book was published
+    }
 
-    // public setYearPublished() {}
+    // setter for yearPublished
+    public void setYearPublished(int newYearPublished) {
+        yearPublished = newYearPublished; // sets a new year for when the book was published
+    }
 
-    // public getIsbn() {}
+    // getter for isbn
+    public String getIsbn() {
+        return isbn; // returns the ISBN number of the book
+    }
 
-    // public void setIsbn() {}
+    // setter for isbn
+    public void setIsbn(String newIsbn) {
+        isbn = newIsbn; // sets a new ISBN for the book
+    }
 
-    // public int getQuantity() {}
+    // getter for quantity
+    public int getQuantity() {
+        return quantity; // returns the quantity of the book
+    }
 
-    // public void setQuantity() {}
+    // setter for quantity
+    public void setQuantity(int newQuantity) {
+        quantity = newQuantity; // sets a new quantity for the book
+    }
 
-    // public  bookInfo(){} //returns "Title: [], Author: [], Year: [], ISBN: [], Quantity: []"
-       
+    // returns book information as a formatted string
+    public String bookInfo(){
+        return "Title: " + title + ", Author: " + author + ", Year: " + yearPublished + ", ISBN: " + isbn + ", Quantity: " + quantity;
+        // returns a string representation of the book with all its attributes
+    }
 }
