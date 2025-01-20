@@ -138,7 +138,7 @@ public class BookStore {
         // append information of each book to the string
         for (Book book : books) {
             if (book != null) {
-                info += book.toString() + "\n"; // add book information to the string
+                info += book.bookInfo() + "\n"; // add book information to the string
             }
         }
         return info; // return the formatted string
@@ -150,7 +150,7 @@ public class BookStore {
         // append information of each user to the string
         for (User user : users) {
             if (user != null) {
-                info += user.toString() + "\n"; // add user information to the string
+                info += user.userInfo() + "\n"; // add user information to the string
             }
         }
         return info; // return the formatted string
